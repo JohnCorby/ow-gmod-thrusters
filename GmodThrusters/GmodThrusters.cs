@@ -21,9 +21,11 @@ public class GmodThrusters : ModBehaviour
 		// Example of accessing game code.
 		LoadManager.OnCompleteSceneLoad += (scene, loadScene) =>
 		{
-			if (loadScene != OWScene.SolarSystem) return;
-			ModHelper.Console.WriteLine("Loaded into solar system!", MessageType.Success);
+			if (loadScene is not (OWScene.SolarSystem or OWScene.EyeOfTheUniverse)) return;
+			ModHelper.Events.Unity.FireOnNextUpdate(() =>
+			{
+				Locator.GetPlayerBody().gameObject.AddComponent<ThrusterPlacer>();
+			});
 		};
 	}
 }
-
