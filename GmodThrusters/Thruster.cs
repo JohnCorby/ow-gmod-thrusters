@@ -23,11 +23,11 @@ public class Thruster : MonoBehaviour
 		if (_body.RunningKinematicSimulation())
 		{
 			// _kinematicRigidbody.AddForceAtPosition does nothing
-			_body._kinematicRigidbody.AddForce(force, ForceMode.Acceleration);
+			_body._kinematicRigidbody.AddForce(force);
 		}
 		else
 		{
-			_body._rigidbody.AddForceAtPosition(force, transform.position, ForceMode.Acceleration);
+			_body._rigidbody.AddForceAtPosition(force, transform.position);
 		}
 	}
 }
