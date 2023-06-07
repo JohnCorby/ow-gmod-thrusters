@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
   "filename": "GmodThrusters.dll",
   "author": "JohnCorby",
-  "name": "GmodThrusters",
+  "name": "Gmod Thrusters",
   "uniqueName": "JohnCorby.GmodThrusters",
   "version": "0.1.0",
   "owmlVersion": "2.9.0",
